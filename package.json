@@ -7,7 +7,7 @@
   "scripts": {
     "start": "babel-node --presets es2015,stage-0 main.js"
   },
-  "main": "main.js",
+  "main": "src/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/wopian/kitsu-season-grabber.git"
