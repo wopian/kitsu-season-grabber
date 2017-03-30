@@ -1,5 +1,7 @@
 # Season Grabber
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wopian/kitsu-season-grabber.svg)](https://greenkeeper.io/)
+
 [![Github Rl]][1]
 [![Travis]][2]
 [![AppVeyor]][3]
