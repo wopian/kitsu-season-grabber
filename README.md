@@ -16,7 +16,7 @@ Grab the titles from any season using [Kitsu][0]
 
 - [git](https://git-scm.com/) 2.0.0 or newer
 - [node.js](https://nodejs.org) 7.0.0 or newer
-- [yarn](https://https://yarnpkg.com) 0.21.0 or newer
+- [yarn](https://https://yarnpkg.com) 0.21.0 or newer (optional)
 
 ### Setup
 
@@ -30,12 +30,16 @@ Grab the titles from any season using [Kitsu][0]
 1. Install dependencies:
 
     ```bash
-    yarn
+    yarn install
+    # or
+    npm i
     ```
 
 2. Run the script:
 
     ```bash
+    yarn start winter 2017
+    # or
     npm start winter 2017
     ```
 
