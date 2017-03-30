@@ -24,7 +24,6 @@
     "babel-preset-es2015": "~6.24.0",
     "babel-preset-stage-0": "~6.22.0",
     "devour-client": "~1.4.1",
-    "devour-jsonapi-client": "^1.0.3",
     "eslint": "~3.18.0",
     "pretty-error": "~2.0.3",
     "standard": "~9.0.2"
