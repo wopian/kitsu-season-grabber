@@ -5,7 +5,8 @@
   "license": "MIT",
   "author": "James Harris <wopian@wopian.me>",
   "scripts": {
-    "start": "babel-node --presets es2015,stage-0 src/main.js"
+    "start": "babel-node --presets es2015,stage-0 src/main.js",
+    "test": " "
   },
   "main": "src/main.js",
   "repository": {
