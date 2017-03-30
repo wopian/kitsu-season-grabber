@@ -1,16 +1,21 @@
 import JsonApi from 'devour-client'
 import { version } from '../package'
+import { arg, checkArg, log, err, pe } from './util'
 
+const baseArg = {
+  season: 'winter',
+  year: 2017,
+  subtype: 'TV'
+}
 const baseUrl = 'https://kitsu.io/api/edge'
 const Kitsu = new JsonApi({
   apiUrl: baseUrl,
   logger: false,
   pluralize: false
 })
-
 let ANIME = []
 
-Kitsu.headers['User-Agent'] = `SeasonGrabber/${version}`
+Kitsu.headers['User-Agent'] = `SeasonGrabber/${version} (wopian)`
 
 Kitsu.define('anime', {
   slug: '',
@@ -26,9 +31,9 @@ async function getSeason (offset) {
       anime: 'slug,canonicalTitle,titles,startDate'
     },
     filter: {
-      season: 'winter',
-      season_year: '2017',
-      subtype: 'TV'
+      season: arg[0] || baseArg.season,
+      season_year: arg[1] || baseArg.year,
+      subtype: arg[2] || baseArg.subtype
     },
     page: {
       limit: 20,
@@ -42,8 +47,6 @@ async function listSeason (offset) {
   .then(response => {
     response.forEach((anime) => {
       if (anime.startDate !== '2017-01-01') {
-        console.log(anime.canonicalTitle)
-        // console.log(`https://kitsu.io/anime/${anime.slug}\n`)
         ANIME.push(anime)
       }
     })
@@ -52,33 +55,47 @@ async function listSeason (offset) {
       listSeason(offset += 20)
     } else {
       // Last page, display the output
-      console.log('\n\n\n\n\n')
       displaySeason()
     }
   })
-  .catch(error => console.error(error))
+  .catch(error => err(pe.render(error)))
 }
 
 async function displaySeason () {
-  const sorted = ANIME.sort((a, b) => {
-    if (a.canonicalTitle < b.canonicalTitle) return -1
-    if (a.canonicalTitle > b.canonicalTitle) return 1
-    return 0
+  const sortCanonical = ANIME.sort((a, b) => {
+    return a.canonicalTitle.localeCompare(b.canonicalTitle)
+  })
+  const sortEnglish = ANIME.sort((a, b) => {
+    if (!a.titles.en) a.titles.en = a.canonicalTitle
+    if (!b.titles.en) b.titles.en = b.canonicalTitle
+    return a.titles.en.localeCompare(b.titles.en)
+  })
+  const sortRomanised = ANIME.sort((a, b) => {
+    if (!a.titles.en_jp) a.titles.en_jp = a.canonicalTitle
+    if (!b.titles.en_jp) b.titles.en_jp = b.canonicalTitle
+    return a.titles.en_jp.localeCompare(b.titles.en_jp)
   })
 
-  sorted.forEach((anime) => {
-    console.log(anime.canonicalTitle)
+  log('Canonical Titles:\n')
+
+  sortCanonical.forEach((anime) => {
+    log(anime.canonicalTitle)
+  })
+
+  log('\nEnglish Titles:\n')
+
+  sortEnglish.forEach((anime) => {
+    log(anime.titles.en)
+  })
+
+  log('\nRomanised Titles:\n')
+
+  sortRomanised.forEach((anime) => {
+    log(anime.titles.en_jp)
   })
 }
 
-listSeason(0)
-
-/*
-https://kitsu.io/api/edge/anime
-?fields[anime]=slug,canonicalTitle,titles
-&filter[season]=winter
-&filter[season_year]=2017
-&filter[subtype]=TV
-&page[limit]=20
-&page[offset]=0
-*/
+Promise.resolve(checkArg())
+.then(valid => {
+  if (valid) listSeason(0)
+})

@@ -25,6 +25,7 @@
     "devour-client": "~1.4.1",
     "devour-jsonapi-client": "^1.0.3",
     "eslint": "~3.18.0",
+    "pretty-error": "~2.0.3",
     "standard": "~9.0.2"
   }
 }
