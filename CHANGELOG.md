@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2017-03-30
+
+### Fixed
+
+- English and Romanised titles being incorrectly alphabetically sorted
+
 ## [0.1.0] - 2017-03-30
 
 ### Added

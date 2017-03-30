@@ -1,6 +1,6 @@
 {
   "name": "kitsu-season-grabber",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get show titles from a season",
   "license": "MIT",
   "author": "James Harris <wopian@wopian.me>",
