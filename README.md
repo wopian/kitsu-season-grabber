@@ -28,7 +28,7 @@ Grab the titles from any season using [Kitsu][0]
 1. Install dependencies:
 
     ```bash
-    yarn install
+    yarn
     # or
     npm i
     ```
@@ -47,9 +47,20 @@ Grab the titles from any season using [Kitsu][0]
 npm start <season> <year> <subtype>
 ```
 
-- `<season>` - `winter`, `spring`, `summer` or `fall` (default `winter`)
-- `<year>` - `1907` to next year (default `2017`)
-- `<subtype>` - `tv`, `special`, `ova`, `ona`, `movie` or `music` (default `tv`)
+`<season>`
+
+- Allowed: `winter`, `spring`, `summer` or `fall`
+- Default: `winter`
+
+`<year>`
+
+- Allowed: `1907` to next year
+- Default: `2017`
+
+`<subtype>`
+
+- Allowed: `tv`, `special`, `ova`, `ona`, `movie` or `music`
+- Default: `tv`
 
 ## Releases
 
