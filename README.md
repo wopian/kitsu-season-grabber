@@ -9,7 +9,7 @@ Grab the titles from any season using [Kitsu][0]
 [![AppVeyor]][3]
 [![CC Coverage]][4]
 [![CC Score]][5]
-[![CC Issues]][6]]
+[![CC Issues]][6]
 [![David]][7]
 
 ### Requirements
