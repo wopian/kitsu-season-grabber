@@ -70,12 +70,12 @@ All code released under the [MIT license][9]
 [AppVeyor]:https://img.shields.io/appveyor/ci/wopian/kitsu-season-grabber/master.svg?style=flat-square&label=windows
 
 [0]:https://kitsu.io
-[1]:https://github.com/wopian/hibari/releases
+[1]:https://github.com/wopian/kitsu-season-grabber/releases
 [2]:https://travis-ci.org/wopian/kitsu-season-grabber
-[3]:https://ci.appveyor.com/project/wopian/hibari
-[4]:https://codeclimate.com/github/wopian/hibari/coverage
-[5]:https://codeclimate.com/github/wopian/hibari
-[6]:https://codeclimate.com/github/wopian/hibari/issues
-[7]:https://david-dm.org/wopian/hibari
-[8]:https://github.com/wopian/hibari/blob/master/CHANGELOG.md
-[9]:https://github.com/wopian/hibari/blob/master/LICENSE.md
+[3]:https://ci.appveyor.com/project/wopian/kitsu-season-grabber
+[4]:https://codeclimate.com/github/wopian/kitsu-season-grabber/coverage
+[5]:https://codeclimate.com/github/wopian/kitsu-season-grabber
+[6]:https://codeclimate.com/github/wopian/kitsu-season-grabber/issues
+[7]:https://david-dm.org/wopian/kitsu-season-grabber
+[8]:https://github.com/wopian/kitsu-season-grabber/blob/master/CHANGELOG.md
+[9]:https://github.com/wopian/kitsu-season-grabber/blob/master/LICENSE.md
