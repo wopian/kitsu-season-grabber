@@ -1,9 +1,5 @@
 # Season Grabber
 
-Grab the titles from any season using [Kitsu][0]
-
-## Usage
-
 [![Github Rl]][1]
 [![Travis]][2]
 [![AppVeyor]][3]
@@ -12,13 +8,15 @@ Grab the titles from any season using [Kitsu][0]
 [![CC Issues]][6]
 [![David]][7]
 
-### Requirements
+Grab the titles from any season using [Kitsu][0]
+
+## Requirements
 
 - [git](https://git-scm.com/) 2.0.0 or newer
 - [node.js](https://nodejs.org) 7.0.0 or newer
 - [yarn](https://https://yarnpkg.com) 0.21.0 or newer (optional)
 
-### Setup
+## Setup
 
 1. Download source code:
 
@@ -35,7 +33,7 @@ Grab the titles from any season using [Kitsu][0]
     npm i
     ```
 
-2. Run the script:
+1. Run the script:
 
     ```bash
     yarn start winter 2017
@@ -43,7 +41,7 @@ Grab the titles from any season using [Kitsu][0]
     npm start winter 2017
     ```
 
-### Parameters
+## Parameters
 
 ```bash
 npm start <season> <year> <subtype>
