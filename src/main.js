@@ -47,6 +47,8 @@ async function listSeason (offset) {
   .then(response => {
     response.forEach((anime) => {
       if (anime.startDate !== '2017-01-01') {
+        if (!anime.titles.en) anime.titles.en = anime.canonicalTitle
+        if (!anime.titles.en_jp) anime.titles.en_jp = anime.canonicalTitle
         ANIME.push(anime)
       }
     })
@@ -66,13 +68,9 @@ async function displaySeason () {
     return a.canonicalTitle.localeCompare(b.canonicalTitle)
   })
   const sortEnglish = ANIME.sort((a, b) => {
-    if (!a.titles.en) a.titles.en = a.canonicalTitle
-    if (!b.titles.en) b.titles.en = b.canonicalTitle
     return a.titles.en.localeCompare(b.titles.en)
   })
   const sortRomanised = ANIME.sort((a, b) => {
-    if (!a.titles.en_jp) a.titles.en_jp = a.canonicalTitle
-    if (!b.titles.en_jp) b.titles.en_jp = b.canonicalTitle
     return a.titles.en_jp.localeCompare(b.titles.en_jp)
   })
 
