@@ -2,10 +2,6 @@
 
 [![Github Rl]][1]
 [![Travis]][2]
-[![AppVeyor]][3]
-[![CC Coverage]][4]
-[![CC Score]][5]
-[![CC Issues]][6]
 [![David]][7]
 
 Grab the titles from any season using [Kitsu][0]
@@ -71,12 +67,8 @@ See [CHANGELOG][8]
 All code released under the [MIT license][9]
 
 [GitHub Rl]:https://img.shields.io/github/release/wopian/kitsu-season-grabber.svg?style=flat-square
-[Travis]:https://img.shields.io/travis/wopian/kitsu-season-grabber/master.svg?style=flat-square&label=linux%20%26%20macOS
-[CC Coverage]:https://img.shields.io/codeclimate/coverage/github/wopian/kitsu-season-grabber.svg?style=flat-square
-[CC Score]:https://img.shields.io/codeclimate/github/wopian/kitsu-season-grabber.svg?style=flat-square
-[CC Issues]:https://img.shields.io/codeclimate/issues/github/wopian/kitsu-season-grabber.svg?style=flat-square
+[Travis]:https://img.shields.io/travis/wopian/kitsu-season-grabber/master.svg?style=flat-square
 [David]:https://img.shields.io/david/wopian/kitsu-season-grabber.svg?style=flat-square
-[AppVeyor]:https://img.shields.io/appveyor/ci/wopian/kitsu-season-grabber/master.svg?style=flat-square&label=windows
 
 [0]:https://kitsu.io
 [1]:https://github.com/wopian/kitsu-season-grabber/releases
