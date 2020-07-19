@@ -27,5 +27,10 @@
     "eslint": "~4.18.2",
     "pretty-error": "~2.1.0",
     "standard": "~10.0.0"
+  },
+  "renovate": {
+    "extends": [
+      "@wopian"
+    ]
   }
 }
