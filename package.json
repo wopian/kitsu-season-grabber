@@ -25,7 +25,7 @@
     "babel-preset-stage-0": "~6.24.1",
     "devour-client": "~2.1.0",
     "eslint": "~7.25.0",
-    "pretty-error": "~2.1.0",
+    "pretty-error": "~3.0.0",
     "standard": "~16.0.0"
   },
   "renovate": {
