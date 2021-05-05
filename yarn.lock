@@ -1343,10 +1343,10 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-devour-client@~2.1.0:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/devour-client/-/devour-client-2.1.2.tgz#c36cdb702775ff8e866c68af14359597564d039d"
-  integrity sha512-xjId5HSfiBfAt6YfLgBpS8MKTHEB+m7+g96dQeR+JHbwzlXTAczGOoFLxImLx17CjfnBqiu/Ckv6WWcS80Xfag==
+devour-client@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/devour-client/-/devour-client-3.0.0.tgz#aa9b98802335fcbb12355308e8a4d895aac4661f"
+  integrity sha512-9+hiFSvpCFQ08Xza4hu5hErdUwUV6rltsZS6mRDLJIWomWb0hhbC/fVenUR1pMYX9EM4eLQvpx72Jil1wrFQAQ==
   dependencies:
     axios "^0.21.0"
     es6-promise ">=3.1.2 <5.0.0"
